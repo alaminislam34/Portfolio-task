@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "../../shared/Header/Navbar";
-import hero from "../../../../../public/hero.png";
 import { Facebook } from "lucide-react";
 import { Instagram } from "lucide-react";
 import { Twitter } from "lucide-react";
@@ -9,12 +8,12 @@ import { ArrowRight } from "lucide-react";
 const Hero = () => {
   return (
     <div
-      className={` bg-[url('/hero.png')] bg-cover bg-center object-cover min-h-[650px]`}
+      className={` bg-[url('/images/hero.png')] bg-top object-cover bg-cover min-h-[650px]`}
     >
       <Navbar />
       <section className="flex items-center min-h-[550px] w-full">
-        <div>
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold ml-12 leading-loose">
+        <div className="w-11/12 mx-auto">
+          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-loose">
             Trusted
             <span>
               {" "}
