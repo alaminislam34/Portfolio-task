@@ -13,7 +13,11 @@ const Hero = () => {
       <Navbar />
       <section className="flex items-center min-h-[550px] w-full">
         <div className="w-11/12 mx-auto">
-          <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-loose">
+          <h1
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="text-2xl md:text-4xl lg:text-6xl font-bold leading-loose"
+          >
             Trusted
             <span>
               {" "}
@@ -25,7 +29,11 @@ const Hero = () => {
               <span className="bg-black rounded-lg text-white">Develop.</span>
             </span>{" "}
           </h1>
-          <div className="flex justify-center gap-12 items-center mt-12">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="flex justify-center gap-12 items-center mt-12"
+          >
             <div className="-rotate-90 min-w-[200px]">
               <p>@williamrey</p>
               <div className="flex flex-row items-center">
@@ -38,6 +46,8 @@ const Hero = () => {
               </div>
             </div>
             <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
               className="w-8/12 mx-auto flex flex-col justify-start items-start gap-12
             "
             >
