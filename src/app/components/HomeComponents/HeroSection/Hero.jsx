@@ -41,7 +41,7 @@ const Hero = () => {
               className="w-8/12 mx-auto flex flex-col justify-start items-start gap-12
             "
             >
-              <p>
+              <p className="max-w-2xl">
                 Building the worlds best marketing websites for over a decade.
                 Your trusted partner for strategy, design, and dev.
               </p>

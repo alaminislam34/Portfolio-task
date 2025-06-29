@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 
 import react from "../../../../../public/images/react.png";
 import Image from "next/image";
+import SectionTitle from "../../shared/sectionTitle";
 
 const data = [
   {
@@ -55,15 +56,7 @@ const WhyChooseMe = () => {
   return (
     <div className="w-11/12 mx-auto py-12">
       {/* Header Section */}
-      <div className="flex items-center gap-3 mb-4">
-        <span className="border rounded-full p-2 flex items-center text-gray-400 justify-center">
-          <ArrowDown size={18} />
-        </span>
-        <p className="py-2 px-4 rounded-full border text-sm text-gray-400">
-          Why Choose Me
-        </p>
-      </div>
-
+      <SectionTitle title={"Why Choose Me"} />
       {/* Heading and Description */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug">
