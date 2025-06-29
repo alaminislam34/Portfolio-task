@@ -11,7 +11,7 @@ const Hero = () => {
       className={` bg-[url('/images/hero.png')] bg-top object-cover bg-cover min-h-[650px]`}
     >
       <Navbar />
-      <section className="flex items-center min-h-[550px] w-full">
+      <section className="max-w-7xl mx-auto flex items-center min-h-[550px] w-full">
         <div className="w-11/12 mx-auto">
           <h1
             data-aos="fade-up"
@@ -34,7 +34,7 @@ const Hero = () => {
             data-aos-duration="1000"
             className="flex justify-center gap-12 items-center mt-12"
           >
-            <div className="-rotate-90 min-w-[200px]">
+            <div className="-rotate-90 max-w-[200px]">
               <p>@williamrey</p>
               <div className="flex flex-row items-center">
                 <div className="border w-10"></div>

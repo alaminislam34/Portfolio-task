@@ -7,16 +7,16 @@ import { ArrowDown, Send } from "lucide-react";
 
 const Contact = () => {
   return (
-    <div className="w-11/12 mx-auto py-16">
+    <div className="w-11/12 mx-auto py-16 max-w-7xl">
       <div className="flex items-center mb-4">
-        <span className="border border-black rounded-full p-2 flex items-center text-gray-800 justify-center">
+        <span className="border border-black rounded-full p-2 flex items-center text-gray-800 dark:text-white dark:border-white justify-center">
           <ArrowDown size={18} />
         </span>
-        <p className="py-2 px-4 rounded-full border text-sm text-gray-800">
+        <p className="py-2 px-4 rounded-full border text-sm text-gray-800 dark:text-white">
           Contact
         </p>
       </div>
-      <div className="flex flex-row items-center justify-between">
+      <div className="flex flex-col gap-6 lg:flex-row items-center justify-between">
         <div className="space-y-4">
           <h1 className="text-2xl text-left md:text-4xl lg:text-6xl font-bold leading-loose">
             Interested in <br />

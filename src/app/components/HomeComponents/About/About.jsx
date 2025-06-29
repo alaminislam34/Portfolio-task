@@ -5,13 +5,13 @@ import AiSection from "./PreviousWork";
 
 const About = () => {
   return (
-    <div className=" py-12 ">
-      <div className="max-w-4xl mx-auto flex flex-col items-end">
+    <div className=" py-12 max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto flex flex-col items-end px-4">
         <div className="flex items-center mb-4">
-          <span className="border border-black rounded-full p-2 flex items-center text-gray-700 justify-center">
+          <span className="border border-black rounded-full p-2 flex items-center text-gray-800 dark:text-white dark:border-white justify-center">
             <ArrowDown size={18} />
           </span>
-          <p className="py-2 px-4 rounded-full border text-sm text-gray-700">
+          <p className="py-2 px-4 rounded-full border text-sm text-gray-800 dark:text-white">
             About
           </p>
         </div>

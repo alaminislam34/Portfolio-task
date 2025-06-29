@@ -1,6 +1,7 @@
-import { ArrowLeft, ArrowRight, ArrowDown } from "lucide-react";
-import React, { useRef } from "react";
+"use client";
 
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import React, { useRef } from "react";
 import react from "../../../../../public/images/react.png";
 import Image from "next/image";
 import SectionTitle from "../../shared/sectionTitle";
@@ -43,6 +44,7 @@ const data = [
       "Full-stack React framework with SSR, routing, API routes, and optimized performance.",
   },
 ];
+
 const WhyChooseMe = () => {
   const sliderRef = useRef(null);
 
@@ -54,16 +56,17 @@ const WhyChooseMe = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto pt-12 pb-2">
+    <div className="w-11/12 mx-auto pt-12 pb-2 max-w-7xl">
       {/* Header Section */}
       <SectionTitle title={"Why Choose Me"} />
+
       {/* Heading and Description */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug">
           My Extensive <br className="hidden md:block" /> List of Skills
         </h1>
-        <div className="mt-4 md:mt-0 md:max-w-md">
-          <p className=" text-sm md:text-base text-right">
+        <div className="md:max-w-md w-full">
+          <p className="text-sm md:text-base text-right">
             Building the world's best marketing. <br />
             Your trusted partner for strategy, design, and dev.
           </p>
@@ -73,7 +76,7 @@ const WhyChooseMe = () => {
 
       {/* Slider Section */}
       <div className="relative w-full max-w-7xl mx-auto py-10">
-        {/* Control Buttons  */}
+        {/* Control Buttons */}
         <div className="absolute -top-4 right-0 z-10 flex gap-2">
           <button
             onClick={() => scroll("left")}
@@ -96,15 +99,14 @@ const WhyChooseMe = () => {
           ref={sliderRef}
           className="flex gap-6 overflow-x-auto py-10 px-2 mt-10 scroll-smooth scrollbar-hide"
         >
-          {/* slider cards */}
           {data.map(({ icon, title, description }, index) => (
             <div
               key={index}
-              className="min-w-[380px] h-[350px] bg-white/10 rounded-2xl shadow-md flex flex-col gap-4 p-4 justify-center font-semibold hover:rotate-12 transition-all duration-300 text-left"
+              className="min-w-[280px] sm:min-w-[300px] md:min-w-[340px] lg:min-w-[380px] h-[350px] bg-white/10 rounded-2xl shadow-md flex flex-col gap-4 p-4 justify-center font-semibold hover:rotate-12 transition-all duration-300 text-left"
             >
               <Image src={icon} alt={title} width={100} height={100} />
               <h1 className="text-xl lg:text-2xl">{title}</h1>
-              <p className="w-3/4 text-gray-400 font-sans">{description}</p>
+              <p className="text-gray-400 font-sans">{description}</p>
             </div>
           ))}
         </div>

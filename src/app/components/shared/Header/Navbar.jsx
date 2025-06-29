@@ -1,82 +1,98 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
-import { Sun } from "lucide-react";
-import { Moon } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ArrowRight, Menu, X, Sun, Moon } from "lucide-react";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // Load theme from localStorage (client-side only)
+  // Load saved theme only on client
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-      if (savedTheme === "dark") {
-        document.documentElement.classList.add("dark");
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        setTheme(savedTheme);
+        document.documentElement.classList.toggle(
+          "dark",
+          savedTheme === "dark"
+        );
       }
     }
   }, []);
-  const handleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
+
+  // Update theme class and localStorage whenever theme changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      localStorage.setItem("theme", theme);
     }
+  }, [theme]);
+
+  const handleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev);
+  };
+
   return (
-    <div>
-      <nav className="flex items-center justify-between w-11/12 mx-auto py-2 md:py-4">
-        <div>
-          <h1
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className="text-[#000000] font-sans text-2xl md:text-3xl tracking-tighter font-bold"
-          >
-            DEVLOP.ME
-          </h1>
-        </div>
+    <header className="text-black dark:text-white">
+      <nav className="max-w-7xl flex justify-between items-center w-11/12 mx-auto py-4">
+        {/* Logo */}
+        <h1 className="text-2xl font-bold tracking-tight">DEVLOP.ME</h1>
 
-        <div className="flex items-center gap-6">
-          <div>
-            <ul
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              className="flex items-center gap-6 *:cursor-pointer *:hover:text-[#425830]"
-            >
-              <li>Home</li>
-              <li>About</li>
-              <li>Portfolio</li>
-              <li>Blog</li>
-            </ul>
-          </div>
-          <div data-aos="fade-up" data-aos-duration="1000">
-            <button
-              onClick={handleTheme}
-              className="flex items-center cursor-pointer"
-            >
-              {theme === "light" ? <Moon /> : <Sun />}
-            </button>
-          </div>
-          <button
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            className="flex items-center gap-2 py-1 rounded-full border hover:bg-[#C5FF41] cursor-pointer duration-300"
-          >
-            <div className="border rounded-full">
-              <ArrowRight />
-            </div>
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center gap-6">
+          <ul className="flex gap-6 *:cursor-pointer *:hover:text-[#425830]">
+            <li>Home</li>
+            <li>About</li>
+            <li>Portfolio</li>
+            <li>Blog</li>
+          </ul>
 
-            <span className="px-2 py-2">Start Project</span>
+          <button onClick={handleTheme} className="cursor-pointer">
+            {theme === "light" ? <Moon /> : <Sun />}
+          </button>
+
+          <button className="flex items-center gap-2 border rounded-full hover:bg-[#C5FF41] transition hover:dark:text-black cursor-pointer py-2">
+            <span className="border rounded-full p-2">
+              {" "}
+              <ArrowRight size={16} />
+            </span>
+            <span className="px-2">Start Project</span>
           </button>
         </div>
+
+        {/* Mobile Menu Toggle */}
+        <button onClick={toggleMenu} className="lg:hidden">
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </nav>
-    </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="lg:hidden w-11/12 mx-auto flex flex-col gap-4 pb-6">
+          <ul className="flex flex-col gap-2">
+            <li className="cursor-pointer hover:text-[#425830]">Home</li>
+            <li className="cursor-pointer hover:text-[#425830]">About</li>
+            <li className="cursor-pointer hover:text-[#425830]">Portfolio</li>
+            <li className="cursor-pointer hover:text-[#425830]">Blog</li>
+          </ul>
+
+          <button onClick={handleTheme} className="flex items-center gap-2">
+            {theme === "light" ? <Moon /> : <Sun />}
+            <span>Toggle Theme</span>
+          </button>
+
+          <button className="flex items-center gap-2 border rounded-full px-4 py-2 w-fit hover:bg-[#C5FF41] dark:bg-[#303a1a] transition cursor-pointer">
+            <ArrowRight size={16} />
+            <span className="">Start Project</span>
+          </button>
+        </div>
+      )}
+    </header>
   );
 };
 

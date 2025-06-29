@@ -14,9 +14,9 @@ export default function Home() {
     Aos.init({ once: true, duration: 1000 });
   }, []);
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="">
       <Hero />
-      <section className="bg-[#141414] min-h-[300px] text-white rounded-4xl mx-4">
+      <section className="bg-[#141414] min-h-[300px] text-white rounded-4xl mx-4 ">
         <WhyChooseMe />
       </section>
       <section
@@ -24,7 +24,7 @@ export default function Home() {
       >
         <About />
       </section>
-      <section className="bg-[#141414] min-h-[300px] text-white rounded-4xl mx-4">
+      <section className="bg-[#141414] min-h-[300px] text-white rounded-4xl mx-4 ">
         <WorkProcess />
       </section>
       <section
