@@ -54,7 +54,7 @@ const WhyChooseMe = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto py-12">
+    <div className="w-11/12 mx-auto pt-12 pb-2">
       {/* Header Section */}
       <SectionTitle title={"Why Choose Me"} />
       {/* Heading and Description */}
