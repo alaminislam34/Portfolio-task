@@ -29,7 +29,7 @@ const Contact = () => {
             We start every new client interaction with an in-depth discovery
             call where we get to know each other
           </p>
-          <button className="flex items-center rounded-full border py-2">
+          <button className="flex items-center rounded-full border py-2 cursor-pointer hover:bg-[#C5FF41] hover:dark:text-black">
             <div className="border rounded-full p-2">
               <IoCall />
             </div>
@@ -55,7 +55,7 @@ const Contact = () => {
               placeholder="Describe your project"
             />
             <div className="flex flex-row gap-2 items-center">
-              <button className="flex items-center gap-2 rounded-full border ">
+              <button className="flex items-center gap-2 rounded-full border  cursor-pointer hover:bg-[#C5FF41] hover:dark:text-black">
                 <div className="border rounded-full p-2">
                   <Send size={16} />
                 </div>
@@ -63,7 +63,7 @@ const Contact = () => {
                 <span className="px-2 py-2 text-sm pr-2">Send</span>
               </button>
               or
-              <button className="flex items-center gap-2 rounded-full border ">
+              <button className="flex items-center gap-2 rounded-full border  cursor-pointer hover:bg-[#C5FF41] hover:dark:text-black">
                 <div className="border rounded-full p-2">
                   <IoMail />
                 </div>
@@ -76,9 +76,9 @@ const Contact = () => {
               <div className="flex flex-row items-center gap-2">
                 <div className="border border-gray-500 w-10"></div>
                 <div className="flex flex-row items-center gap-2">
-                  <FaFacebook className="text-2xl" />
-                  <FaInstagram className="text-2xl" />
-                  <FaTwitter className="text-2xl" />
+                  <FaFacebook className="text-2xl cursor-pointer hover:text-[#c5ff41]" />
+                  <FaInstagram className="text-2xl cursor-pointer hover:text-[#c5ff41]" />
+                  <FaTwitter className="text-2xl cursor-pointer hover:text-[#c5ff41]" />
                 </div>
               </div>
             </div>
