@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ArrowRight, Menu, X, Sun, Moon } from "lucide-react";
+import { RxCross1 } from "react-icons/rx";
 
 const Navbar = () => {
   const [theme, setTheme] = useState("light");
@@ -38,7 +39,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="text-black dark:text-white">
+    <header className="text-black dark:text-white relative">
       <nav className="max-w-7xl flex justify-between items-center w-11/12 mx-auto py-4">
         {/* Logo */}
         <h1 className="text-2xl font-bold tracking-tight">DEVLOP.ME</h1>
@@ -73,19 +74,46 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden w-11/12 mx-auto flex flex-col gap-4 pb-6">
+        <div
+          className={`lg:hidden absolute ${
+            menuOpen === true ? "top-0" : "-top-60"
+          } left-0 w-full p-6 bg-white dark:bg-black text-black dark:text-white flex flex-col gap-4 pb-6`}
+        >
+          <div className="relative">
+            <button onClick={toggleMenu} className="absolute top-0 right-0">
+              <RxCross1 />
+            </button>
+          </div>
           <ul className="flex flex-col gap-2">
-            <li className="cursor-pointer hover:text-[#425830]">Home</li>
-            <li className="cursor-pointer hover:text-[#425830]">About</li>
-            <li className="cursor-pointer hover:text-[#425830]">Portfolio</li>
-            <li className="cursor-pointer hover:text-[#425830]">Blog</li>
+            <li
+              onClick={toggleMenu}
+              className="cursor-pointer hover:text-[#425830]"
+            >
+              Home
+            </li>
+            <li
+              onClick={toggleMenu}
+              className="cursor-pointer hover:text-[#425830]"
+            >
+              About
+            </li>
+            <li
+              onClick={toggleMenu}
+              className="cursor-pointer hover:text-[#425830]"
+            >
+              Portfolio
+            </li>
+            <li
+              onClick={toggleMenu}
+              className="cursor-pointer hover:text-[#425830]"
+            >
+              Blog
+            </li>
           </ul>
 
           <button onClick={handleTheme} className="flex items-center gap-2">
             {theme === "light" ? <Moon /> : <Sun />}
-            <span>Toggle Theme</span>
           </button>
-
           <button className="flex items-center gap-2 border rounded-full px-4 py-2 w-fit hover:bg-[#C5FF41] dark:bg-[#303a1a] transition cursor-pointer">
             <ArrowRight size={16} />
             <span className="">Start Project</span>

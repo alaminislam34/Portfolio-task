@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <div className="w-11/12 mx-auto py-16 max-w-7xl">
-      <div className="flex flex-row justify-between">
+      <div className="flex flex-col md:flex-row justify-between">
         <div className="w-2/5">
           <h1 className="text-lg md:text-xl text-[#C5FF41] font-bold">
             DEVLOP.ME
