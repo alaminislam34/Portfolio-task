@@ -14,27 +14,27 @@ export default function PreviousWork() {
         {/* Right Logos */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 w-full">
           {/* 1 */}
-          <div className="py-2 px-4 text-center rotate-6 rounded-full border border-black  text-black dark:text-white dark:border-white ">
+          <div className="py-2 px-4 text-center rotate-6 rounded-full border border-black  text-black dark:text-white dark:border-white text-xs md:text-sm lg:text-base">
             awwwards.
           </div>
           {/* 2 */}
-          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white ">
+          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white text-xs md:text-sm lg:text-base">
             CSS WINNER
           </div>
           {/* 3 */}
-          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white  -rotate-6">
+          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white text-xs md:text-sm lg:text-base -rotate-6">
             /thoughtworks
           </div>
           {/* 4 */}
-          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white ">
+          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white text-xs md:text-sm lg:text-base">
             facebook
           </div>
           {/* 5 */}
-          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white  rotate-6 flex items-center justify-center gap-1">
+          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white text-xs md:text-sm lg:text-base rotate-6 flex items-center justify-center gap-1">
             <span className="text-lg">🧩</span> CSSDesignAwards
           </div>
           {/* 6 */}
-          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white  -rotate-4 flex items-center justify-center gap-1">
+          <div className="py-2 px-4 text-center rounded-full border border-black  text-black dark:text-white dark:border-white text-xs md:text-sm lg:text-base -rotate-4 flex items-center justify-center gap-1">
             <span className="text-lg">🧱</span> AUTODESK
           </div>
         </div>
