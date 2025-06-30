@@ -70,10 +70,10 @@ const WhyChooseMe = () => {
 
       {/* Heading and Description */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl sm:w-1/2 font-bold leading-snug">
           My Extensive <br className="hidden md:block" /> List of Skills
         </h1>
-        <div className="md:max-w-md w-full">
+        <div className="md:max-w-md w-1/2">
           <p className="text-sm md:text-base text-right">
             Building the world's best marketing. <br />
             Your trusted partner for strategy, design, and dev.
