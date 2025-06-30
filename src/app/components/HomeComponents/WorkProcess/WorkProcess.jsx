@@ -59,7 +59,7 @@ const WorkProcess = () => {
         </div>
         {/* card container */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4 my-6">
-          <div className="text-white flex flex-col justify-between bg-black rounded-3xl p-6 min-h-[250px] group hover:rotate-4 duration-300 hover:bg-[#C5FF41]">
+          <div className="text-white flex flex-col justify-between bg-black rounded-3xl p-6 md:min-h-[250px] min-h-[300px] group hover:rotate-4 duration-300 hover:bg-[#C5FF41]">
             <div className="flex items-center justify-between">
               <div className="rounded-full bg-[#c5ffee] group-hover:bg-black group-hover:text-white p-1 px-3 text-sm text-black">
                 Discovery
@@ -75,7 +75,7 @@ const WorkProcess = () => {
               future objectives, and recommend the best course of action.
             </p>
           </div>
-          <div className="text-white flex flex-col justify-between bg-black rounded-3xl p-6 min-h-[250px] group hover:rotate-4 duration-300 hover:bg-[#C5FF41]">
+          <div className="text-white flex flex-col justify-between bg-black rounded-3xl p-6 md:min-h-[250px] min-h-[300px] group hover:rotate-4 duration-300 hover:bg-[#C5FF41]">
             <div className="flex items-center justify-between">
               <div className="rounded-full bg-[#c5ffee] group-hover:bg-black group-hover:text-white p-1 px-3 text-sm text-black">
                 Strategy
@@ -91,7 +91,7 @@ const WorkProcess = () => {
               we're here to set the stage for success.
             </p>
           </div>
-          <div className="text-white flex flex-col justify-between bg-black rounded-3xl p-6 min-h-[250px] group hover:rotate-4 duration-300 hover:bg-[#C5FF41]">
+          <div className="text-white flex flex-col justify-between bg-black rounded-3xl p-6 md:min-h-[250px] min-h-[300px] group hover:rotate-4 duration-300 hover:bg-[#C5FF41]">
             <div className="flex items-center justify-between">
               <div className="rounded-full bg-[#c5ffee] group-hover:bg-black group-hover:text-white p-1 px-3 text-sm text-black">
                 Design
@@ -107,7 +107,7 @@ const WorkProcess = () => {
               reviewed, and given your stamp of approval.
             </p>
           </div>
-          <div className="text-white flex flex-col justify-between bg-black rounded-3xl p-6 min-h-[250px] group hover:rotate-4 duration-300 hover:bg-[#C5FF41]">
+          <div className="text-white flex flex-col justify-between bg-black rounded-3xl p-6 md:min-h-[250px] min-h-[300px] group hover:rotate-4 duration-300 hover:bg-[#C5FF41]">
             <div className="flex items-center justify-between">
               <div className="rounded-full bg-[#c5ffee] group-hover:bg-black group-hover:text-white p-1 px-3 text-sm text-black">
                 Build
