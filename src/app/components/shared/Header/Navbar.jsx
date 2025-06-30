@@ -80,10 +80,12 @@ const Navbar = () => {
           } left-0 w-full p-6 bg-white dark:bg-black text-black dark:text-white flex flex-col gap-4 pb-6`}
         >
           <div className="relative">
+            {/* Close Button */}
             <button onClick={toggleMenu} className="absolute top-0 right-0">
               <RxCross1 />
             </button>
           </div>
+          {/* Menu Items */}
           <ul className="flex flex-col gap-2">
             <li
               onClick={toggleMenu}

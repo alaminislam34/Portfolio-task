@@ -34,28 +34,28 @@ const Hero = () => {
             data-aos-duration="1000"
             className="flex justify-center gap-12 items-center mt-12"
           >
-            <div className="-rotate-90 max-w-[200px]">
+            <div className="-rotate-90 w-1/3 md:max-w-[200px]">
               <p>@williamrey</p>
               <div className="flex flex-row items-center">
                 <div className="border w-10"></div>
                 <div className="flex flex-row gap-4 mt-2">
-                  <Facebook className="" />
-                  <Instagram className="" />
-                  <Twitter className="" />
+                  <Facebook className="cursor-pointer" />
+                  <Instagram className="cursor-pointer" />
+                  <Twitter className="cursor-pointer" />
                 </div>
               </div>
             </div>
             <div
               data-aos="fade-up"
               data-aos-duration="1000"
-              className="w-8/12 mx-auto flex flex-col justify-start items-start gap-12
+              className="w-2/3 mx-auto flex flex-col justify-start items-start gap-12
             "
             >
               <p className="max-w-2xl">
                 Building the worlds best marketing websites for over a decade.
                 Your trusted partner for strategy, design, and dev.
               </p>
-              <button className="flex items-center gap-2 rounded-full border ">
+              <button className="flex items-center gap-2 rounded-full border cursor-pointer hover:bg-[#C5FF41] hover:dark:text-black">
                 <div className="border rounded-full">
                   <ArrowRight />
                 </div>
