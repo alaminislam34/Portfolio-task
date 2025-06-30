@@ -50,11 +50,19 @@ const WhyChooseMe = () => {
 
   const scroll = (direction) => {
     if (sliderRef.current) {
-      const scrollAmount = direction === "left" ? -408 : 408;
+      let scrollAmount;
+
+      if (window.innerWidth < 640) {
+        // Small devices (like mobile)
+        scrollAmount = direction === "left" ? -300 : 300;
+      } else {
+        // Larger devices
+        scrollAmount = direction === "left" ? -408 : 408;
+      }
+
       sliderRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
-
   return (
     <div className="w-11/12 mx-auto pt-12 pb-2 max-w-7xl">
       {/* Header Section */}
